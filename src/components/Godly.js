@@ -1,0 +1,27 @@
+import { Card, Typography } from '@material-tailwind/react';
+
+
+export default function InspirationCard(props) {
+  return (
+    <a 
+    href="https://godly.website/">
+    <Card 
+    className="w-96 border-solid border-stone-900 border-1 relative flex flex-col p-[4px]  gradient__border card godly__main ">
+    <div className='black__bg p-[96px]'>
+      <Typography 
+        className="text-white text-6xl font-extrabold godly godly__gradient"
+        align="center"
+        >
+        Godly
+      </Typography>
+      <Typography 
+        className="text-slate-300 mt-[20px]"
+        align="center"
+        >
+        A website featuring a curated collection of amazing websites and web applications.
+      </Typography>
+        </div>
+    </Card>
+    </a>
+  );
+}
