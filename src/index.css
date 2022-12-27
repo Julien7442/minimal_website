@@ -1,13 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter:400,700');
+@import url('https://fonts.googleapis.com/css?family=SF+Compact+Display:400,700');
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,700');
+@import url('https://fonts.googleapis.com/css?family=Futura+PT:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lazer+84:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  font-family: 'Albert Sans', sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 24px 0px;
+  position: relative;
+  gap: 10px;
+  place-content: center flex-start;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.column1 {
+  place-content: center flex-start;
+  align-items: center;
+  display: flex;
+  flex: 1 0 0px;
+  flex-flow: column nowrap;
+  gap: 24px;
+  height: min-content;
+  padding: 0px;
+  position: relative;
+  width: 1px;
+}
+
+.main-columns {
+  place-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: row nowrap;
+  gap: 24px;
+  height: min-content;
+  max-width: 800px;
+  overflow: visible;
+  padding: 0px 0px 24px;
+  position: relative;
+  width: 800px;
+  z-index: 3;
+}
+
+
+.pink__gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(20px);
+}
+
+.spotify__gradient { 
+ background: radial-gradient(94.3% 175% at 93.8% 25%, rgba(31, 214, 97, 0.2) 0%, rgba(30, 215, 96, 0.05) 100%); 
+}
+
+.github__color {
+  background-color: white;
+}
+
+/* github button */
+
+.github__font {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 1em;
+}
+
+.githubButton:hover {
+  border-color: white;
+  box-shadow: 0 0 10px white;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  }
+
+
+
+/* Responsive */
+
+@media (max-width: 809px) {
+.main-columns {
+  flex-direction: column;
+  max-width: 100%;
+  padding: 0px 24px 24px;
+  width: 100%;
+  }
 }

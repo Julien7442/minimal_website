@@ -1,23 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styles from './style';
+import CardComponent from './components/CardComponent';
+import CardComponent2 from './components/CardComponent2';
+import Spotify from './components/Spotify'
+import triangle from './assets/triangle.png';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-columns'>
+      <div className='column1'>
+
+      <CardComponent2 
+      imageUrl={triangle} 
+      title="Julien" 
+      description="I'm a web developer based in France." />
+
+       <Spotify
+      title="George Brenson" 
+      description="Give me the night" />
+
+       <CardComponent2 
+      imageUrl={triangle} 
+      title="Julien" 
+      description="I'm a web developer based in France." />
+
+       <CardComponent2 
+      imageUrl={triangle} 
+      title="Julien" 
+      description="I'm a web developer based in France." />
+      </div>
+      <div className='column1'>
+
+      <CardComponent2 
+      imageUrl={triangle} 
+      title="Julien" 
+      description="I'm a web developer based in France." />
+
+      <CardComponent2 
+      imageUrl={triangle} 
+      title="Julien" 
+      description="I'm a web developer based in France." />
+
+      <CardComponent2 
+      imageUrl={triangle} 
+      title="Julien" 
+      description="I'm a web developer based in France." />
+      </div>
     </div>
   );
 }
