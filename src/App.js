@@ -16,7 +16,7 @@ function App() {
       description="I'm a web developer based in France." />
 
        <Spotify
-      title="George Brenson" 
+      title="George Benson" 
       description="Give me the night" />
 
        <CardComponent2 

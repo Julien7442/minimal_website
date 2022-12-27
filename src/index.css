@@ -93,7 +93,19 @@ body {
   cursor: pointer;
   }
 
+  .play-button__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
 
+    .play-button__circle {
+      background-color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%
+    }
 
 /* Responsive */
 
