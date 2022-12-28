@@ -5,14 +5,14 @@ export default function card2(props) {
   return (
     <Card 
     className="w-96 gap-[24px] p-[48px] border-solid border-stone-900 border-[1px] rounded-3xl relative">
-      <div className="relative ">
+      <div className="relative">
         <div className="pink__gradient h-[25px] w-[25px] absolute top-[18px] left-[13px] z-0" />
       <img src={props.imageUrl} 
       alt="props_img" 
       className="h-[50px] w-[50px]" />  
       </div>
         <Typography 
-        className="text-white text-2xl">
+        className="text-white text-3xl font-extrabold">
           {props.title}
         </Typography>
         <Typography 

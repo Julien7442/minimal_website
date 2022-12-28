@@ -1,5 +1,5 @@
 import { Card, Typography } from '@material-tailwind/react';
-
+import chainLink from '../assets/chainLink.png'
 
 export default function InspirationCard(props) {
   return (
@@ -20,6 +20,10 @@ export default function InspirationCard(props) {
         >
         A website featuring a curated collection of amazing websites and web applications.
       </Typography>
+      <img src={chainLink} 
+          alt="github"
+          className="h-[18px] w-[18px] mx-auto mt-3 absolute bottom-4 right-4"
+          />
         </div>
     </Card>
     </a>
