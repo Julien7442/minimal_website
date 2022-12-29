@@ -1,14 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Matter from 'matter-js';
-import { sample } from 'lodash';
-import { Card } from '@material-tailwind/react';
+import { Card, Typography } from '@material-tailwind/react';
 import image1 from '../assets/ethWhite.png';
 import image2 from '../assets/jsLogo.jpg';
 import image3 from '../assets/blender.png';
 import image4 from '../assets/Ps.jpg';
 import image5 from '../assets/reactLogo.jpg';
 import image6 from '../assets/solidity.png';
+import stack from '../assets/stack.jpg';
 
 class Scene extends React.Component {
   constructor(props) {
@@ -122,7 +121,7 @@ class Scene extends React.Component {
           sprite: {
             texture: image6,
             xScale: 0.35,
-            yScale: 0.4,
+            yScale: 0.38,
           },
         },
       }
@@ -136,7 +135,12 @@ class Scene extends React.Component {
       Bodies.rectangle(400, 230, 40, 460, { isStatic: true, render: { fillStyle: '#000000' } }),
       //  bottom
       Bodies.rectangle(180, 475, 388, 10, { isStatic: true, render: { fillStyle: '#000000' } }),
+      // top
       Bodies.rectangle(180, -10, 388, 10, { isStatic: true, render: { fillStyle: '#000000' } }),
+      // text box
+      Bodies.rectangle(-40, 475, 388, 130, { isStatic: true, render: { fillStyle: '#000000' } }),
+       // stack box
+       Bodies.rectangle(370, 475, 58, 90, { isStatic: true, render: { fillStyle: '#000000' } }),
     ]);
 
     World.add(engine.world, ballA);
@@ -172,8 +176,22 @@ class Scene extends React.Component {
 
   render() {
     return (
-      <Card className="border-solid border-slate-900 border-[1px] rounded-3xl h-[476px] w-[388px] relative overflow-hidden will-change-transform">
+      <Card className="border-solid border-stone-900 border-[1px] rounded-3xl h-[476px] w-[388px] relative overflow-hidden will-change-transform">
         <div ref="scene" />;
+        <div className='flex flex-start'>
+        <Typography 
+          className="text-white text-lg opacity-1 z-10 absolute bottom-10 left-8 font-bold">
+            My stack
+          </Typography>
+          <Typography 
+          className="text-slate-300 opacity-1 z-10 absolute bottom-4 left-8">
+              Design to code
+          </Typography> 
+          </div>
+          <img src={stack} 
+          alt="stack_icon"
+          className="h-[22px] w-[22px] mx-auto mt-3 absolute bottom-4 right-4"
+          />
       </Card>
     );
   }
