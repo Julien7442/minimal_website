@@ -9,7 +9,7 @@ export default function InspirationCard(props) {
     className="w-96 border-solid border-stone-900 border-1 relative flex flex-col p-[4px]  gradient__border card godly__main ">
     <div className='black__bg p-[96px]'>
       <Typography 
-        className="text-white text-6xl font-extrabold godly godly__gradient"
+        className="text-white text-6xl font-extrabold godly godly__gradient godly__text"
         align="center"
         >
         Godly

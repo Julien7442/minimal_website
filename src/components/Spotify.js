@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, Typography } from '@material-tailwind/react';
 import spotifyLogo from '../assets/spotifyLogo.png';
 import georgeBenson from '../assets/georgeBrenson.jpg';
@@ -12,14 +12,14 @@ function SpotifyCard(props) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [sound, setSound] = useState(null);
 
+  useEffect(() => {
+    setSound(new Howl({
+      src: [Mp3],
+      html5: true,
+    }));
+  }, []);
+
   function playMusic() {
-    console.log('playing music');
-    if (!sound) {
-      setSound(new Howl({
-        src: [Mp3],
-        html5: true,
-      }));
-    }
     if (isPlaying) {
       sound.pause();
     } else {
@@ -66,11 +66,11 @@ function SpotifyCard(props) {
       </div>
       <div 
       className="">
-        <Typography variant="h5" 
-        className="text-slate-300 text-sm">
+        <Typography
+        className="text-slate-300 text-base font-medium">
           {props.title}
         </Typography>
-        <Typography variant="body2" 
+        <Typography 
         className=" text-white text-xl font-bold">
           {props.description}
         </Typography>
