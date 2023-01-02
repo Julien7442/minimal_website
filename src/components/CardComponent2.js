@@ -4,7 +4,7 @@ import github from '../assets/github.png'
 export default function card2(props) {
   return (
     <Card 
-    className="w-96 gap-[24px] p-[48px] border-solid border-stone-900 border-[1px] rounded-3xl relative">
+    className="w-96 gap-[24px] p-[48px] border-solid border-stone-800 border-[1px] rounded-3xl relative">
       <div className="relative">
         <div className="pink__gradient h-[25px] w-[25px] absolute top-[18px] left-[13px] z-0" />
       <img src={props.imageUrl} 

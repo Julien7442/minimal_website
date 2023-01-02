@@ -31,7 +31,7 @@ function SpotifyCard(props) {
 
   return (
     <Card 
-    className="w-96 p-[24px] border-solid border-stone-900 border-[1px] rounded-3xl relative spotify__gradient flex flex-row gap-[16px]">
+    className="w-96 p-[24px] rounded-3xl relative spotify__gradient flex flex-row gap-[16px]">
       <div 
       className="relative ">
         <div 

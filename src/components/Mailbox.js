@@ -60,7 +60,7 @@ const Mailbox = () => {
   };
 
   return (
-    <StyledCard className="mailbox mx-auto w-96 border-solid border-stone-900 border-[1px] rounded-3xl relative">
+    <StyledCard className="mailbox w-96 border-solid border-stone-800 border-[1px] rounded-3xl relative">
       {/* Display error message if email or message is empty */}
       {error && (
         <div className="error-message rounded-lg bg-red-600 text-white p-3 ">
@@ -73,7 +73,7 @@ const Mailbox = () => {
           Message sent!
         </div>
       )}
-      <div className="box rounded-lg shadow-md p-6">
+      <div className=" rounded-lg shadow-md p-6">
         <p className="text-xl font-semibold text-white">Say hi</p>
         <p className="text-base mb-5 text-slate-300">I'll try to reply asap</p>
         <form ref={form} onSubmit={sendEmail}>

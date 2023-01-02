@@ -1,9 +1,9 @@
 import React from 'react';
 import Matter from 'matter-js';
 import { Card, Typography } from '@material-tailwind/react';
-import image1 from '../assets/ethWhite.png';
-import image2 from '../assets/jsLogo.jpg';
-import image3 from '../assets/blender.png';
+import image1 from '../assets/htmlLogo.png';
+import image2 from '../assets/cssLogo.png';
+import image3 from '../assets/TSlogo.png';
 import image4 from '../assets/Ps.jpg';
 import image5 from '../assets/reactLogo.jpg';
 import image6 from '../assets/solidity.png';
@@ -49,40 +49,40 @@ class Scene extends React.Component {
 
     var images = [image1, image2, image3, image4, image5];
 
-    var ballA = Bodies.circle(render.options.width / 2, render.options.height / 2 - 100, 30, {
+    var ballA = Bodies.rectangle(render.options.width / 2, render.options.height / 2 - 100, 30, 30, {
       restitution: 0.5,
       render: {
         sprite: {
           texture: image1,
-          xScale: 0.035,
-          yScale: 0.035,
+          xScale: 0.25,
+          yScale: 0.25,
         },
       },
     });
 
-    var ballB = Bodies.circle(render.options.width / 2, render.options.height / 2 - 75, 35, {
+    var ballB = Bodies.circle(render.options.width / 2, render.options.height / 2 - 75, 22, {
       restitution: 0.5,
       render: {
         sprite: {
           texture: image3,
-          xScale: 0.2,
-          yScale: 0.2,
+          xScale: 0.3,
+          yScale: 0.3,
         },
       },
     });
 
-    var ballC = Bodies.rectangle(render.options.width / 2, render.options.height / 2 - 50, 65, 65, {
+    var ballC = Bodies.rectangle(render.options.width / 2, render.options.height / 2 - 50, 50, 50, {
       restitution: 0.5,
       render: {
         sprite: {
           texture: image2,
-          xScale: 0.15,
-          yScale: 0.15,
+          xScale: 0.25,
+          yScale: 0.25,
         },
       },
     });
 
-    var ballD = Bodies.rectangle(render.options.width / 2, render.options.height / 2, 65, 65, {
+    var ballD = Bodies.rectangle(render.options.width / 2, render.options.height / 2, 64, 64, {
       restitution: 0.5,
       render: {
         sprite: {
@@ -176,7 +176,7 @@ class Scene extends React.Component {
 
   render() {
     return (
-      <Card className="border-solid border-stone-900 border-[1px] rounded-3xl h-[476px] w-[388px] relative overflow-hidden will-change-transform">
+      <Card className="border-solid border-stone-800 border-[1px] rounded-3xl h-[476px] w-[388px] relative overflow-hidden will-change-transform">
         <div ref="scene" />;
         <div className='flex flex-start'>
         <Typography 
